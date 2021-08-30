@@ -1,1 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+
+    <style>
+      .container {
+        border: 10px solid #121417;
+        height: 300px;
+        width: 1000px;
+        margin: auto;
+        display: flex;
+        align-items: flex-end;
+        background-color: #121417;
+      }
+      .container2 {
+        display: flex;
+        justify-content: center;
+      }
+      #one,
+      #two,
+      #three,
+      #four,
+      #five {
+        width: 200px;
+        height: 300px;
+      }
+      #one {
+        background-color: #5237cc;
+      }
+      #two {
+        background-color: #733975;
+      }
+
+      #three {
+        background-color: #c2425b;
+      }
+
+      #four {
+        background-color: #b8573e;
+      }
+
+      #five {
+        background-color: #bf7a26;
+      }
+      @keyframes mymove {
+        0% {
+          height: 20px;
+        }
+
+        10% {
+          height: 170px;
+        }
+
+        20% {
+          height: 280px;
+        }
+
+        30% {
+          height: 130px;
+        }
+
+        40% {
+          height: 10px;
+        }
+
+        50% {
+          height: 120px;
+        }
+
+        60% {
+          height: 160px;
+        }
+
+        70% {
+          height: 200px;
+        }
+
+        80% {
+          height: 150px;
+        }
+
+        90% {
+          height: 170px;
+        }
+
+        100% {
+          height: 20px;
+        }
+      }
+
+      @keyframes mymove2 {
+        0% {
+          height: 30px;
+        }
+
+        10% {
+          height: 180px;
+        }
+
+        20% {
+          height: 250px;
+        }
+
+        30% {
+          height: 170px;
+        }
+
+        40% {
+          height: 50px;
+        }
+
+        50% {
+          height: 170px;
+        }
+
+        60% {
+          height: 120px;
+        }
+
+        70% {
+          height: 20px;
+        }
+
+        80% {
+          height: 40px;
+        }
+
+        90% {
+          height: 290px;
+        }
+
+        100% {
+          height: 30px;
+        }
+      }
+      @keyframes mymove3 {
+        0% {
+          height: 160px;
+        }
+
+        10% {
+          height: 120px;
+        }
+
+        20% {
+          height: 130px;
+        }
+
+        30% {
+          height: 170px;
+        }
+
+        40% {
+          height: 10px;
+        }
+
+        50% {
+          height: 170px;
+        }
+
+        60% {
+          height: 100px;
+        }
+
+        70% {
+          height: 200px;
+        }
+
+        80% {
+          height: 180px;
+        }
+
+        90% {
+          height: 150px;
+        }
+
+        100% {
+          height: 100px;
+        }
+      }
+      @keyframes mymove4 {
+        0% {
+          height: 30px;
+        }
+
+        10% {
+          height: 120px;
+        }
+
+        20% {
+          height: 20px;
+        }
+
+        30% {
+          height: 190px;
+        }
+
+        40% {
+          height: 130px;
+        }
+
+        50% {
+          height: 150px;
+        }
+
+        60% {
+          height: 200px;
+        }
+
+        70% {
+          height: 100px;
+        }
+
+        80% {
+          height: 150px;
+        }
+
+        90% {
+          height: 180px;
+        }
+
+        100% {
+          height: 200px;
+        }
+      }
+      @keyframes mymove5 {
+        0% {
+          height: 140px;
+        }
+
+        10% {
+          height: 40px;
+        }
+
+        20% {
+          height: 120px;
+        }
+
+        30% {
+          height: 200px;
+        }
+
+        40% {
+          height: 15px;
+        }
+
+        50% {
+          height: 100px;
+        }
+
+        60% {
+          height: 180px;
+        }
+
+        70% {
+          height: 280px;
+        }
+
+        80% {
+          height: 140px;
+        }
+
+        90% {
+          height: 120px;
+        }
+
+        100% {
+          height: 100px;
+        }
+      }
+      .btn {
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 17px;
+        background: #0f940f;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+        padding: 10px 40px;
+        margin: 0px 140px;
+      }
+
+      .btn:hover {
+        text-decoration: none;
+      }
+
+      .btn2 {
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 17px;
+        background: #cf0b0b;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+        padding: 10px 40px;
+        margin: 0px 140px;
+      }
+
+      .btn:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+      <div id="four"></div>
+      <div id="five"></div>
+    </div>
+    <br /><br /><br />
+    <div class="container2">
+      <button class="btn" onclick="start()">Start</button>
+      <button class="btn2" onclick="stop()">Stop</button>
+    </div>
+    <script>
+      let one = document.getElementById("one");
+      let two = document.getElementById("two");
+      let three = document.getElementById("three");
+      let four = document.getElementById("four");
+      let five = document.getElementById("five");
+      function start() {
+        one.style.animation = "mymove 10s infinite";
+        two.style.animation = "mymove2 10s infinite";
+        three.style.animation = "mymove3 10s infinite";
+        four.style.animation = "mymove4 10s infinite";
+        five.style.animation = "mymove5 10s infinite";
+      }
+      function stop() {
+        one.style.animation = "none";
+        two.style.animation = "none";
+        three.style.animation = "none";
+        four.style.animation = "none";
+        five.style.animation = "none";
+      }
+    </script>
+  </body>
+</html>
 
